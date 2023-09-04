@@ -1,0 +1,562 @@
+:root {
+  --pressed-state: #404bbf;
+  --primary-text-color: #434455;
+  --cloud: #f4f4fd;
+  --accent-grey-color: #2e2f42;
+  --primary-el-color: #4d5ae5;
+  --cornflower: #e7e9fc;
+  --lightslate: #8e8f99;
+  --green: #31d0aa;
+}
+
+/* ########################### global ########################### */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  background-color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ########################### Common styles ########################### */
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sm-link {
+  /* Box model */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  /* Transition */
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Visual */
+  border-radius: 50%;
+}
+
+/* ########################### Header ########################### */
+
+.page-header {
+  border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.menu-list-item {
+  padding: 24px 0;
+}
+
+.navigation {
+  /* Box model */
+  padding: 24px 0;
+
+  /* Typography */
+  color: var(--accent-grey-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  /* Transition */
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation:hover,
+.navigation:active,
+.navigation:focus {
+  color: var(--pressed-state);
+}
+
+.studio-link {
+  /* Positioning */
+  position: relative;
+  color: var(--pressed-state);
+}
+
+.studio-link::after {
+  /* Positioning */
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  /* Box model */
+  margin: 0;
+
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--pressed-state);
+}
+
+.contact-links {
+  font-style: normal;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  /* Transition */
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-links:hover,
+.contact-links:active,
+.contact-links:focus {
+  color: var(--pressed-state);
+}
+
+.logo-header {
+  color: var(--primary-el-color);
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  /* Box model */
+  margin-right: 76px;
+}
+
+.logo-accent {
+  color: var(--accent-grey-color);
+}
+
+/* ########################### Main ########################### */
+
+/* ########################### Section 1 - HERO ########################### */
+
+.hero-container {
+}
+
+.title-section {
+  /* Box model */
+  padding: 188px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* Visual */
+  background-color: var(--accent-grey-color);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  max-width: 496px;
+  /* Box model */
+  margin-bottom: 48px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-button {
+  /* Box model */
+  display: block;
+  padding: 16px 32px;
+  min-width: 169px;
+  margin: 0 auto;
+
+  /* Typography */
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+
+  /* Visual */
+  background-color: var(--primary-el-color);
+  border-radius: 4px;
+  border: none;
+
+  /* Transition */
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-button:hover,
+.title-button:focus,
+.title-button:active {
+  background-color: var(--pressed-state);
+}
+
+/* ########################### Section 2 - features ########################### */
+
+.features-icons-list {
+  /* Box model */
+  display: flex;
+  gap: 24px;
+}
+
+.features-icons-item {
+  /* Box model */
+  width: calc((100% - 72px) / 4);
+}
+
+.features-icon-container {
+  /* Box model */
+  display: flex;
+  height: 112px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+
+  /* Visual */
+  border: 1px solid var(--lightslate);
+  border-radius: 4px;
+  background: var(--cloud);
+}
+
+.features-list {
+  /* Box model */
+  display: flex;
+  gap: 24px;
+}
+
+.features-list-item {
+  /* Box model */
+  display: block;
+  width: calc((100% - 72px) / 4);
+}
+
+.features-elements-title {
+  /* Box model */
+  margin-bottom: 8px;
+  /* Typography */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--accent-grey-color);
+}
+
+/* ########################### Section 3 - team ########################### */
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.our-team-section {
+  background-color: var(--cloud);
+}
+
+.section-title {
+  /* Box model */
+  margin-bottom: 72px;
+  /* Typography */
+  color: var(--accent-grey-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.team-cards {
+  /* Box model */
+  width: calc((100% - 72px) / 4);
+
+  /* Visual */
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-cards-info {
+  display: block;
+  padding: 32px 0;
+}
+
+.team-elements-title {
+  /* Box model */
+  margin-bottom: 8px;
+  /* Typography */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--accent-grey-color);
+  text-align: center;
+}
+
+.team-elements-text {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sm-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-content: center;
+}
+
+.sm-list-item {
+  /* Box model */
+  width: 40px;
+  height: 40px;
+}
+
+.sm-team-link {
+  /* Visual */
+  background-color: var(--primary-el-color);
+}
+
+.sm-team-link:hover,
+.sm-team-link:active,
+.sm-team-link:focus {
+  background-color: var(--pressed-state);
+}
+
+.sm-icon {
+  fill: var(--cloud);
+}
+/* ########################### Section 4 - portfolio ########################### */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  justify-content: center;
+}
+
+.portfolio-list-item {
+  /* Box model */
+  width: calc((100% - 48px) / 3);
+
+  /* Transition */
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus,
+.portfolio-list-item:active {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-items-info {
+  /* Box model */
+  display: block;
+  padding: 32px 16px;
+
+  /* Visual */
+  border: 1px solid var(--cornflower);
+  border-top: none;
+}
+
+.overlay-text {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+
+  /* Visual */
+  background-color: var(--primary-el-color);
+
+  /* Transition */
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Typography */
+  color: var(--cloud);
+  text-align: justify;
+}
+
+.portfolio-img {
+  /* Overlay */
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-list-item:hover .overlay-text {
+  transform: translateY(0);
+}
+
+.portfolio-elements-title {
+  /* Box model */
+  margin-bottom: 8px;
+  /* Typography */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--accent-grey-color);
+}
+
+.portfolio-elements-text {
+}
+
+/* ########################### Footer ########################### */
+.custom-footer {
+  /* Box model */
+  padding: 100px 0;
+  /* Visual */
+  background-color: var(--accent-grey-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-footer-container {
+  margin-right: 120px;
+}
+
+.logo-footer {
+  /* Box model */
+  display: block;
+  margin-bottom: 16px;
+
+  /* Typography */
+  color: var(--primary-el-color);
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo-accent-footer {
+  color: var(--cloud);
+}
+
+.footer-text {
+  color: var(--cloud);
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+}
+
+.sm-footer-container {
+}
+
+.sm-footer-text {
+  /* Box model */
+  margin-bottom: 16px;
+
+  /* Typography */
+  color: #fff;
+  font-weight: 500;
+}
+
+.sm-footer-list {
+  display: flex;
+  gap: 16px;
+}
+
+.sm-footer-link {
+  /* Visual */
+  background-color: var(--primary-el-color);
+}
+
+.sm-footer-link:hover,
+.sm-footer-link:focus,
+.sm-footer-link:active {
+  background-color: var(--green);
+}
