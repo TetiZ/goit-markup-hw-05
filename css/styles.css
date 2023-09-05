@@ -659,7 +659,6 @@ textarea {
 }
 
 .modal-window-body {
-  min-heihgt: 100%;
   display: flex;
   justify-content: center;
   padding-top: 80px;
@@ -690,12 +689,28 @@ textarea {
   width: 100%;
 }
 
+.input-form-thumb {
+  position: relative;
+}
+
+.input-form-icon {
+  /* Positioning */
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  margin: 0;
+
+  /* Visual */
+  fill: var(--lightslate);
+}
+
 .modal-contact-form input:not(input[type="checkbox"]),
 .modal-textarea {
   /* Box model */
   display: block;
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  padding: 8px 16px;
 
   /* Visual */
   border-radius: 4px;
@@ -703,8 +718,6 @@ textarea {
 }
 
 .modal-textarea::placeholder {
-  padding: 8px 16px;
-
   /* Typography */
   font-size: 12px;
   line-height: 1.17em;
