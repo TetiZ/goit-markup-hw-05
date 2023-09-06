@@ -610,6 +610,8 @@ textarea {
   letter-spacing: 0.04em;
 
   /* Visual */
+  border: 1px solid #ffffff;
+  border-radius: 4px;
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -640,7 +642,7 @@ textarea {
 
 /* ########################### Modal Window ########################### */
 
-.modal-contact-window {
+.modal-window-container {
   /* Positioning */
   position: fixed;
   top: 0;
@@ -650,21 +652,34 @@ textarea {
 
   /* Visual */
   background-color: rgba(46, 47, 66, 0.4);
+
+  /* Transition */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-window-body {
+.modal-window {
+  /* Box model */
   display: flex;
   justify-content: center;
-  padding-top: 80px;
-}
-.modal-window-content {
-  /* Box model */
-  padding: 24px;
-  max-width: 408px;
+  padding: 72px 24px 24px 24px;
+  width: 408px;
+  min-height: 584px;
+
+  /* Positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
   /* Visual */
   background-color: var(--dairy);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  /* Transition */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
 }
 
 .modal-window-text {
@@ -771,12 +786,33 @@ textarea {
   margin-left: auto;
   margin-bottom: 24px;
 
+  /* Positioning */
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   /* Visual */
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--cornflower);
+
+  /* Transition */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--pressed-state);
+  border: none;
 }
 
 .icon-close {
   fill: var(--accent-grey-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: var(--pressed-state);
 }
