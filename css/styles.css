@@ -591,7 +591,6 @@ textarea {
 
 .subs-form {
   display: flex;
-  flex-direction: column;
   gap: 24px;
 }
 
@@ -602,39 +601,41 @@ textarea {
   /* Box model */
   width: 264px;
   height: 40px;
-}
-
-.subs-input::placeholder {
-  /* Box model */
-  padding: 8px 16px;
+  padding-left: 16px;
 
   /* Typography */
   color: #fff;
   font-size: 12px;
-  line-height: 2em;
-  letter-spacing: 0.03em;
+  line-height: 1.5em;
+  letter-spacing: 0.04em;
+
+  /* Visual */
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
-.subs-input:placeholder-shown {
-  /* Visual */
-  background-color: var(--accent-grey-color);
-  border-radius: 4px;
-  border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+.subs-input::placeholder {
+  /* Typography */
+  color: #fff;
 }
 
 .btn-subs {
   /* Box model */
+  min-width: 165px;
+  height: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 24px;
-  gap: 16px;
 
   /* Visual */
+  border: none;
   border-radius: 4px;
 }
 
 .btn-icon-subs {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /* ########################### Modal Window ########################### */
