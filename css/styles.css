@@ -598,13 +598,13 @@ textarea {
 .subs-label {
 }
 
-.subs-field {
+.subs-input {
   /* Box model */
   width: 264px;
   height: 40px;
 }
 
-.subs-field::placeholder {
+.subs-input::placeholder {
   /* Box model */
   padding: 8px 16px;
 
@@ -615,7 +615,7 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.subs-field:placeholder-shown {
+.subs-input:placeholder-shown {
   /* Visual */
   background-color: var(--accent-grey-color);
   border-radius: 4px;
