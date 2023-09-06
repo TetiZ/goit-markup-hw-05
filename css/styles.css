@@ -560,7 +560,7 @@ textarea {
 .sm-footer-container {
 }
 
-.sm-footer-text {
+.footer-text-title {
   /* Box model */
   margin-bottom: 16px;
 
@@ -585,25 +585,23 @@ textarea {
   background-color: var(--green);
 }
 
+/* ############ Footer form ############## */
+.form-container {
+}
+
 .subs-form {
   display: flex;
   flex-direction: column;
-}
-
-.subs-field-container {
-  display: flex;
-  /* padding: 0; */
+  gap: 24px;
 }
 
 .subs-label {
-  margin-bottom: 16px;
-  color: #fff;
-  font-weight: 500;
 }
 
 .subs-field {
+  /* Box model */
   width: 264px;
-  margin-right: 24px;
+  height: 40px;
 }
 
 .subs-field::placeholder {
