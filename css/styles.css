@@ -657,6 +657,11 @@ textarea {
   /* Transition */
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Is Open */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal-window {
@@ -878,4 +883,12 @@ textarea {
 
 .user-privacy-link {
   color: var(--primary-el-color);
+}
+
+/* ##### Is Open ##### */
+
+.modal-window-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
