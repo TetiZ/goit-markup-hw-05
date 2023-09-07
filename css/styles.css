@@ -658,6 +658,12 @@ textarea {
   pointer-events: none;
 }
 
+.modal-window-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .modal-window {
   /* Box model */
   padding: 72px 24px 24px 24px;
@@ -843,9 +849,6 @@ textarea {
   margin-bottom: 24px;
 }
 
-.user-privacy-content {
-  display: inline-flex;
-}
 .custom-checkbox {
   display: inline-flex;
   justify-content: center;
@@ -877,12 +880,4 @@ textarea {
 
 .user-privacy-link {
   color: var(--primary-el-color);
-}
-
-/* ##### Is Open ##### */
-
-.modal-window-container.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
 }
