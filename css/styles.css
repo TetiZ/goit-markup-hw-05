@@ -518,7 +518,6 @@ textarea {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .logo-footer-container {
@@ -566,6 +565,7 @@ textarea {
 .sm-footer-list {
   display: flex;
   gap: 16px;
+  margin-right: 80px;
 }
 
 .sm-footer-link {
@@ -870,6 +870,10 @@ textarea {
 
   /* Icon */
   fill: transparent;
+}
+
+.custom-checkbox:focus {
+  border-color: var(--pressed-state);
 }
 
 .user-privacy-checkbox:checked + .modal-lable > .custom-checkbox {
